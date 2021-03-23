@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Masukkan Data Mahasiswa</title>
+	<link rel="stylesheet" href="cssuts.css">
+    <center>
+    <script type="text/javascript">
+        var jumlah = prompt("Masukkan Jumlah Mahasiswa : ")
+
+		for(var n=1;n<=jumlah;n++)
+		{
+			document.write("<br>")
+			document.write("<table>")
+			document.write("<h2>Mahasiswa "+n+"</h2>")
+			document.write("<tr>")
+			document.write("<td>NIM</td>")
+			document.write("<td><input type='text' id='nim"+n+"'></td>")
+			document.write("</tr>")
+			document.write("<tr>")
+			document.write("<td>Nama</td>")
+			document.write("<td><input type='text' id='nama"+n+"'></td>")
+			document.write("</tr>")
+			document.write("<tr>")
+			document.write("<td>Tugas 1</td>")
+			document.write("<td><input type='text' id='tugas_1"+n+"'></td>")
+			document.write("</tr>")
+			document.write("<tr>")
+			document.write("<td>Tugas 2</td>")
+			document.write("<td><input type='text' id='tugas_2"+n+"'></td>")
+			document.write("</tr>")
+			document.write("<tr>")
+			document.write("<td>UTS</td>")
+			document.write("<td><input type='text' id='uts"+n+"'></td>")
+			document.write("</tr>")
+			document.write("<tr>")
+			document.write("<td>UAS</td>")
+			document.write("<td><input type='text' id='uas"+n+"'></td>")
+            document.write("</tr>")
+       
+        }
+			document.write("<tr><td><input type='button' value='Submit' onclick='data("+jumlah+")'></td>")
+			document.write("<td><input type='reset' value='Reset'></td></tr>")
+        function data(jml) 
+    
+		{
+			var td = ""
+			for(var t=1;t<=jml;t++){
+				var nim = document.getElementById('nim' + t).value
+				var nama = document.getElementById('nama' + t).value
+				var tugas_1 = parseFloat(document.getElementById('tugas_1' + t).value)
+				if (isNaN(tugas_1)) {
+					tugas_1 = 0.0
+				}
+				var tugas_2 = parseFloat(document.getElementById('tugas_2' + t).value)
+				if (isNaN(tugas_2)) {
+					tugas_2 = 0.0
+				}
+				var uts = parseFloat(document.getElementById('uts' + t).value)
+				if (isNaN(uts)) {
+					uts = 0.0
+				}
+				var uas = parseFloat(document.getElementById('uas' + t).value)
+				if (isNaN(uas)) {
+					uas = 0.0
+				}
+
+				var total = tugas_1+tugas_2+uts+uas
+				var rata = total/4
+				var nilai
+				var ket
+				if (rata >= 85 && rata <= 100) 
+				{
+					nilai = "A";
+					ket = "LULUS";
+				}
+				else if (rata >= 70 && rata <= 84)
+				{
+					nilai = "B";
+					ket = "LULUS"
+				}
+				else if (rata >= 60 && rata <= 69)
+				{
+					nilai = "C"
+					ket = "LULUS"
+				}
+				else if (rata >= 50 && rata <= 59)
+				{
+					nilai = "D"
+					ket = "TIDAK LULUS"
+                }
+                else if (rata < 50 )
+
+                {
+                    nilai = "E"
+					ket = "TIDAK LULUS"
+                }
+				
+				td += "<tr>"
+				td += "<td>" + t + "</td>";
+				td += "<td>" + nim + "</td>";
+				td += "<td>" + nama + "</td>";
+				td += "<td>" + tugas_1 + "</td>";
+				td += "<td>" + tugas_2 + "</td>";
+				td += "<td>" + uts + "</td>";
+				td += "<td>" + uas + "</td>";
+				td += "<td>" + rata + "</td>";
+				td += "<td>" + nilai + "</td>";
+				td += "<td>" + ket + "</td>";
+				td += "</tr>"
+			}
+			document.getElementById('isi').innerHTML = td;
+		}
+	</script>
+	<table border="1" class="blueTable">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Nim</th>
+				<th>Nama</th>
+				<th>Tugas 1</th>
+				<th>Tugas 2</th>
+				<th>UTS</th>
+				<th>UAS</th>
+				<th>Rata - Rata</th>
+				<th>Grade</th>
+				<th>Keterangan</th>
+			</tr>
+		</thead>
+		<tbody id="isi">
+        <body> <body bgcolor ="blue sea"></body>
+        </center>
+        <HR WIDTH="%">
+            <HR WIDTH="%">
+		</tbody>
+	</table>
+
+</html>
+    

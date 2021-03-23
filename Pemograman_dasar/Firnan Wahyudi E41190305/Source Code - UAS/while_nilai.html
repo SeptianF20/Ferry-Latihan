@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nilai</title>
+	<style type="text/css">
+		table, td, th { 
+  			border: 3px solid black;
+  			text-align: center;
+  			color: black;
+		}
+		table {
+  			border-collapse: collapse;
+  			width: 100%;
+		}
+
+		th, td {
+  			padding: 15px;
+		}
+		h3{
+			text-align: center;
+			color: black;
+		}
+	</style>
+</head>
+<body style="background-image: url(asa.png);">
+	<script type="text/javascript">
+		var nim = prompt("Masukkan NIM :");
+		var nama = prompt("Masukkan Nama : ");
+		document.write("<h3>NIM : "+nim+"</h3>");
+		document.write("<h3>Nama : "+nama+"</h3>");
+		var loop = prompt("Masukkan Jumlah Nilai : ");
+		loop = eval(loop)
+		var i = 1; var huruf = "";
+			document.write("<table border='1' align='center'>");
+			document.write("<tr>");
+			document.write("<th>Nilai Ke</th>");
+			document.write("<th>Nilai</th>");
+			document.write("<th>Huruf</th>");
+			document.write("</tr>")
+		while(i <= loop){
+			var nilai = prompt("Masukkan Nilai Ke "+i+" :");
+			nilai = eval(nilai);
+			if (nilai >= 90 && nilai <= 100) {
+				huruf = "A";
+			}else if (nilai >= 80 && nilai <= 89) {
+				huruf = "B";
+			}else if (nilai >= 60 && nilai <= 79) {
+				huruf = "C";
+			}else if (nilai >= 50 && nilai <= 59) {
+				huruf = "D";
+			}else if (nilai >= 0 && nilai <= 49) {
+				huruf = "E";
+			}
+			document.write("<tr>");
+			document.write("<td>"+i+"</td>");
+			document.write("<td>"+nilai+"</td>");
+			document.write("<td>"+huruf+"</td>");
+			document.write("</tr>")
+			i++
+		}
+		document.write("</table>");
+	</script>
+</body>
+</html>

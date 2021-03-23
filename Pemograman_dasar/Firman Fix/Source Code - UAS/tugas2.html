@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Mahasiswa</title>
+	<style type="text/css">
+		h1{
+			text-align : center;
+			color: black;
+			padding: 30px;
+		}
+		body{
+			background-image: url(asa.png);
+		}
+		table, td, th { 
+  			border: 3px solid black;
+  			text-align: center;
+  			color: black;
+		}
+		table {
+  			border-collapse: collapse;
+  			width: 100%;
+		}
+
+		th, td {
+  			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Data Mahasiswa</h1>
+	<hr>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nim</th>
+				<th>Nama</th>
+				<th>Tugas 1</th>
+				<th>Tugas 2</th>
+				<th>UTS</th>
+				<th>UAS</th>
+				<th>Rata - Rata</th>
+				<th>Huruf</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody id="isi">
+			<script type="text/javascript">
+				var jmlh = prompt("Masukkan Jumlah Siswa :")
+				jmlh = eval(jmlh)
+				for(i=1;i<=jmlh;i++){
+				//Pengisian Data Mahasiswa
+				var nim = prompt("Masukkan Nim :");
+				var nama = prompt("Masukkan Nama :");
+				var tgs_1 = prompt("Masukkan Nilai Tugas 1 :");
+				tgs_1 = eval(tgs_1);
+				var tgs_2 = prompt("Masukkan Nilai Tugas 2 :");
+				tgs_2 = eval(tgs_2);
+				var uts = prompt("Masukkan Nilai UTS :");
+				uts = eval(uts);
+				var uas = prompt("Masukkan Nilai UAS :");
+				uas = eval(uas);
+
+				//Perhitungan Rata Rata
+				rata = (tgs_1+tgs_2+uts+uas)/4;
+				//Pemberian Grade dan Status
+				var status = "";
+				var huruf = "";
+				if (rata >= 85 && rata <= 100) {
+					huruf = "A";
+					status = "LULUS";
+				}else if (rata >= 70 && rata <= 84) {
+					huruf = "B";
+					status = "LULUS";
+				}else if (rata >=60 && rata <= 69) {
+					huruf = "C"
+					status = "Lulus"
+				}else if (rata >= 50 && rata <= 59) {
+					huruf = "D"
+					status = "Tidak Lulus"
+				}else if (rata >= 0 && rata <= 49) {
+					huruf = "E"
+					status = "Tidak Lulus"
+				}else{
+					huruf = "Nilai Tidak Valid"
+					status = "Nilai Tidak Valid"
+				}
+
+				document.write("<tr>")
+				document.write("<td>"+i+"</td>")
+				document.write("<td>"+nim+"</td>")
+				document.write("<td>"+nama+"</td>")
+				document.write("<td>"+tgs_1+"</td>")
+				document.write("<td>"+tgs_2+"</td>")
+				document.write("<td>"+uts+"</td>")
+				document.write("<td>"+uas+"</td>")
+				document.write("<td>"+rata+"</td>")
+				document.write("<td>"+huruf+"</td>")
+				document.write("<td>"+status+"</td>")
+				document.write("</tr>")
+			}
+		</script>
+		</tbody>
+	</table>
+</body>
+</html>

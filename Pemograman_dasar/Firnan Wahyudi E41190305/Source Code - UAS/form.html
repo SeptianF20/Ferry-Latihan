@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form With Bootstrap</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			background-image: url(asa.png);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col-sm-12">
+			<hr  align="center" color="#6495ED">
+			<center><h2>Data Mahasiswa</h2></center>
+			<hr align="center" color="#6495ED">
+			<form name="form">
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">NIM</label>
+					<div class="col-sm-7">
+						<input type="text" name="nim" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Nama</label>
+					<div class="col-sm-7">
+						<input type="text" name="nama" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+					<div class="col-sm-7">
+						<div class="form-check">
+							<input type="radio" name="jk" class="form-check-input" value="Pria">
+							<label class="form-check-label">Pria</label>
+						</div>
+						<div class="form-check">
+							<input type="radio" name="jk" class="form-check-input" value="Wanita">
+							<label class="form-check-label">Wanita</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Agama</label>
+					<div class="col-sm-7">
+						<select name="agama" class="form-control">
+							<option value="Silahkan Pilih Agama">Silahkan Pilih Agama</option>
+							<option value="Islam">Islam</option>
+							<option value="Kristen">Kristen</option>
+							<option value="Hindu">Hindu</option>
+							<option value="Budha">Budha</option>
+							<option value="Khonghucu">Khonghucu</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Status</label>
+					<div class="col-sm-7">
+						<div class="form-check">
+							<input type="checkbox" name="BelumMenikah" class="form-check-input">
+							<label class="form-check-label">Belum Menikah</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" name="Menikah" class="form-check-input">
+							<label class="form-check-label">Menikah</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Progam Studi</label>
+					<div class="col-sm-7">
+						<div class="form-check">
+							<input type="checkbox" name="TIF" class="form-check-input">
+							<label class="form-check-label">TIF</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" name="TKK" class="form-check-input">
+							<label class="form-check-label">TKK</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" name="MIF" class="form-check-input">
+							<label class="form-check-label">MIF</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Essay</label>
+					<div class="col-sm-7">
+						<textarea class="form-control" name="essay"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-outline-primary" onclick="tampilkan()">Tampilkan Data</button>
+					<button type="reset" class="btn btn-outline-danger">Reset</button>
+				</div>
+				<hr align="center" color="#6495ED">
+				<center><h2>Hasil Data</h2></center>
+				<hr align="center" color="#6495ED">
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">NIM</label>
+					<div class="col-sm-7">
+						<input type="text" name="nimout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Nama</label>
+					<div class="col-sm-7">
+						<input type="text" name="namaout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+					<div class="col-sm-7">
+						<input type="text" name="jkout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Agama</label>
+					<div class="col-sm-7">
+						<input type="text" name="agamaout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Status</label>
+					<div class="col-sm-7">
+						<input type="text" name="statusout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Program Studi</label>
+					<div class="col-sm-7">
+						<input type="text" name="prodiout" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Essay</label>
+					<div class="col-sm-7">
+						<textarea class="form-control" name="essayout"></textarea>
+					</div>
+				</div>
+				<hr align="center" color="#6495ED">
+			</form>
+		</div>
+	</div>
+</body>
+<script>	
+	function tampilkan() {
+	//nama
+	var nama = (document.form.nama.value);
+	document.form.namaout.value = nama;
+	
+	//nim
+	var nim = (document.form.nim.value);
+	document.form.nimout.value = nim;
+
+	//jenis kelamin
+	var jk = (document.form.jk.value);
+	document.form.jkout.value = jk;
+
+	//agama
+	var agama = (document.form.agama.value);
+	document.form.agamaout.value = agama;
+
+	//essay
+	var essay = (document.form.essay.value);
+	document.form.essayout.value = essay;
+
+	//status
+	var status="";
+	if (document.form.Menikah.checked == true) {
+		status = "Menikah";
+	}else if (document.form.BelumMenikah.checked == true) {
+		status = "Belum Menikah";
+	}
+	document.form.statusout.value = status;
+
+	//program studi
+	var prodi="";
+	if (document.form.TIF.checked == true) {
+		prodi = "TIF";
+	} else if (document.form.TKK.checked == true) {
+		prodi = "TKK";
+	} else if (document.form.MIF.checked == true) {
+		prodi = "MIF";
+	}
+	document.form.prodiout.value = prodi;
+}
+</script>
+</html>

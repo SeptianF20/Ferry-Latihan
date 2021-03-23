@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "baru.Main",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SecretMessage",
+            "request": "launch",
+            "mainClass": "secretmessage.SecretMessage",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SecretMessage",
+            "request": "launch",
+            "mainClass": "SecretMessage",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FinalExam<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "FinalExam",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ManagingPeople<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "ManagingPeople",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Message<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "Message",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Person<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "Person",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Person<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>(1)",
+            "request": "launch",
+            "mainClass": "baru.Person",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringObject<Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b>",
+            "request": "launch",
+            "mainClass": "baru.StringObject",
+            "projectName": "Ferry Septian Ferdiyanto-E41191224-TIFB_5a08ca1b"
+        }
+    ]
+}

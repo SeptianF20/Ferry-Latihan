@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="cssform.css">
+</head>
+<body bgcolor="blue red">
+	<div class="container">
+		<form autocomplete="off" name="mahasiswa">
+			<div class="col-50">
+				<center><h2>Input Data</h2></center>
+				<div class="row">
+					<div class="col-25">
+						<label>NIM</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="nim">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Nama</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="nama">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Jenis Kelamin</label>
+					</div>
+					<div class="col-75">
+						<input type="radio" name="LK" value="Pria">Pria
+						<input type="radio" name="WN" value="Wanita">Wanita
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Agama</label>
+					</div>
+					<div class="col-75">
+						<select name="agama">
+							<option value="Silahkan Pilih">Silahkan Pilih</option>
+							<option value="Islam">Islam</option>
+							<option value="Kristen">Kristen</option>
+							<option value="Hindu">Hindu</option>
+							<option value="Budha">Budha</option>
+							<option value="Khonghucu">Khonghucu</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Program Studi</label>
+					</div>
+					<div class="col-75">
+						<input type="checkbox" name="TIF"><span>TIF</span>
+						<input type="checkbox" name="TKK"><span>TKK</span>
+						<input type="checkbox" name="MIF"><span>MIF</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Status</label>
+					</div>
+					<div class="col-75">
+						<input type="checkbox" name="Menikah"><span>Menikah</span>
+						<input type="checkbox" name="BelumMenikah"><span>Belum Menikah</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Essay</label>
+					</div>
+					<div class="col-75">
+						<textarea name="essay"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<input type="button" value="Tampilkan" onclick="data()">
+					</div>
+					<div class="col-50"></div>
+					<div class="col-25">
+						<input type="reset" name="reset" value="Reset">
+					</div>
+				</div>
+			</div>
+			<div class="col-50">
+				<center><h2>Hasil Data</h2></center>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;NIM</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="nimout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;Nama</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="namaout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;Jenis Kelamin</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="jkout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;Agama</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="agamaout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;Status</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="statusout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>&nbsp;Program Studi</label>
+					</div>
+					<div class="col-75">
+						<input type="text" name="prodiout">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label>Essay</label>
+					</div>
+					<div class="col-75">
+						<textarea name="essayout"></textarea>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+<script>
+	function data() {
+	// body...
+
+	/*menyimpan inputan dari form berdasarkan name di dalam variabel*/
+	var nim = (document.mahasiswa.nim.value);
+	var nama = (document.mahasiswa.nama.value);
+	var agama = (document.mahasiswa.agama.value);
+	var essay = (document.mahasiswa.essay.value);
+	var jk = "";
+	if(document.mahasiswa.LK.checked == true){
+		jk = "Laki - Laki"
+	}else if (document.mahasiswa.LK.checked == true) {
+		jk = "Wanita"
+	}
+	var status = "";
+	if (document.mahasiswa.Menikah.checked == true) {
+		status = "Menikah";
+	}else if (document.mahasiswa.BelumMenikah.checked == true) {
+		status = "Belum Menikah";
+	}else {
+		status = "";
+	}
+
+	var prodi = "";
+	if (document.mahasiswa.TIF.checked == true) {
+		prodi = "TIF";
+	}else if (document.mahasiswa.MIF.checked == true) {
+		prodi = "MIF";
+	}else if (document.mahasiswa.TKK.checked == true) {
+		prodi = "TKK";
+	}else{
+		prodi = "";
+	}
+
+					/*selese*/
+
+	/*mengeluarkan data dari dalam variabel*/
+	document.mahasiswa.nimout.value = nim;
+	document.mahasiswa.namaout.value = nama;
+	document.mahasiswa.jkout.value = jk;
+	document.mahasiswa.agamaout.value = agama;
+	document.mahasiswa.statusout.value = status;
+	document.mahasiswa.prodiout.value = prodi;
+	document.mahasiswa.essayout.value = essay;
+}
+</script>
+</html>
